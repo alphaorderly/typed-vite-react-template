@@ -42,5 +42,10 @@ export default tseslint.config(
         },
     },
     prettier,
-    ...tailwind.configs['flat/recommended']
+    ...tailwind.configs['flat/recommended'],
+    {
+        rules: {
+            'tailwindcss/classnames-order': 'off',
+        },
+    }
 );
