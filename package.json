@@ -11,7 +11,8 @@
         "prepare": "husky",
         "test-once": "vitest run",
         "test": "vitest --watch",
-        "commitlint": "commitlint --edit"
+        "commitlint": "commitlint --edit",
+        "postinstall": "node init-template.js"
     },
     "dependencies": {
         "@tanstack/react-form": "^0.39.0",
@@ -40,6 +41,8 @@
         "@types/react-dom": "^18.3.1",
         "@vitejs/plugin-react-swc": "^3.5.0",
         "autoprefixer": "^10.4.20",
+        "boxen": "^8.0.1",
+        "chalk": "^5.3.0",
         "eslint": "^9.13.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-react": "^7.37.2",
@@ -48,6 +51,7 @@
         "eslint-plugin-tailwindcss": "^3.17.5",
         "globals": "^15.11.0",
         "husky": "^9.1.6",
+        "inquirer": "^12.1.0",
         "jsdom": "^25.0.1",
         "lint-staged": "^15.2.10",
         "msw": "^2.6.6",
