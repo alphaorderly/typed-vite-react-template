@@ -1,5 +1,5 @@
 import {
-    Box,
+    Package,
     Paintbrush,
     AlertCircle,
     Dog,
@@ -51,7 +51,7 @@ const App = () => {
                 <div className="relative mb-12">
                     <div className="absolute -left-4 -top-4 size-32 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 blur-xl"></div>
                     <div className="relative flex flex-col items-center">
-                        <Box className="mb-4 size-12 text-blue-600" />
+                        <Package className="mb-4 size-12 text-blue-600" />
                         <h1 className="mb-3 text-center font-square text-4xl font-extrabold text-gray-900">
                             Typed Vite React Template
                         </h1>
