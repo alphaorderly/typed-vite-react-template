@@ -23,8 +23,8 @@ const App = () => {
     ];
 
     return (
-        <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 p-6">
-            <div className="w-full max-w-2xl overflow-hidden rounded-2xl bg-white p-8 shadow-xl">
+        <div className="flex h-screen items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 p-6">
+            <div className="flex h-4/5 w-full max-w-2xl flex-col rounded-2xl bg-white p-8 shadow-xl">
                 {/* Header Section */}
                 <div className="relative mb-12">
                     <div className="absolute -left-4 -top-4 size-32 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 blur-xl"></div>
@@ -37,7 +37,7 @@ const App = () => {
                 </div>
 
                 {/* Libraries Section */}
-                <div className="space-y-3">
+                <div className="flex-1 space-y-3 overflow-scroll">
                     <div className="flex items-center justify-between">
                         <h2 className="text-xl font-semibold text-gray-800">
                             Included Libraries
@@ -51,7 +51,7 @@ const App = () => {
                         {libraries.map((library, index) => (
                             <div
                                 key={index}
-                                className="group relative overflow-hidden rounded-xl bg-gray-50 p-4 transition-all hover:bg-gray-100 hover:shadow-md"
+                                className="group relative rounded-xl bg-gray-50 p-4 transition-all hover:bg-gray-100 hover:shadow-md"
                             >
                                 <div className="flex items-center gap-4">
                                     <div className="flex size-8 items-center justify-center rounded-lg bg-white font-medium text-gray-700 shadow-sm">
