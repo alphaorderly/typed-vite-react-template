@@ -28,7 +28,6 @@ A modern and well-configured starting point for your React projects, utilizing T
 
     ```bash
     git clone https://github.com/alphaorderly/typed-vite-react-template .
-    cd typed-vite-react-template
     ```
 
 2. **Install dependencies**:
