@@ -22,10 +22,12 @@ A modern and well-configured starting point for your React projects, utilizing T
 
 ## Quick Start
 
+0. **Move to directory you want to create react project**
+
 1. **Clone the repository**:
 
     ```bash
-    git clone <repo-url>
+    git clone https://github.com/alphaorderly/typed-vite-react-template .
     cd typed-vite-react-template
     ```
 
