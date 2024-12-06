@@ -254,8 +254,8 @@ async function main() {
                 chalk.green('✨ Project successfully initialized!') +
                     `\n📦 Name: ${chalk.blue(name)}` +
                     `\n📝 Description: ${chalk.blue(description)}` +
-                    `\n⚖️  License: ${chalk.blue(license)}`,
-                { padding: 1, margin: 1, borderStyle: 'round' }
+                    `\n👤  License: ${chalk.blue(license)}`, // 공백 추가
+                { padding: 2, margin: 1, borderStyle: 'classic' }
             )
         );
     } catch (error) {
