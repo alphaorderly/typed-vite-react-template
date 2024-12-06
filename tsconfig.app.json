@@ -36,5 +36,5 @@
             "@utils/*": ["src/utils/*"]
         }
     },
-    "include": ["src", "vitest-setup.ts"]
+    "include": ["src", "vitest-setup.ts", "i18n.ts"]
 }

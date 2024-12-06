@@ -154,32 +154,7 @@ async function main() {
                 .then(() => true)
                 .catch(() => false)
         ) {
-            console.log(
-                boxen(
-                    chalk.yellow(
-                        'Template already initialized. Proceeding will overwrite existing files.'
-                    ),
-                    {
-                        padding: 1,
-                        margin: 1,
-                        borderStyle: 'round',
-                    }
-                )
-            );
-
-            const { proceed } = await inquirer.prompt([
-                {
-                    type: 'confirm',
-                    name: 'proceed',
-                    message: 'Do you want to proceed with reinitialization?',
-                    default: false,
-                },
-            ]);
-
-            if (!proceed) {
-                console.log(chalk.blue('Operation cancelled.'));
-                return;
-            }
+            return;
         }
 
         // Welcome message

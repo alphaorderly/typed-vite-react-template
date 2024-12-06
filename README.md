@@ -19,6 +19,7 @@ A modern and well-configured starting point for your React projects, utilizing T
     -   React Virtual: For virtualizing large lists.
 -   **Zod**: Schema validation.
 -   **Clsx and Tailwind Merge**: Utility for conditional class management.
+-   **i18next**: Internationalization support for multiple languages.
 
 ## Quick Start
 
@@ -125,6 +126,7 @@ The template comes pre-configured with the following libraries and tools:
 | **Clsx**            | Conditional classnames          |
 | **Lucide Icons**    | Icon library                    |
 | **MSW**             | Mock Service Worker for testing |
+| **i18next**         | Internationalization            |
 
 ## Customization
 

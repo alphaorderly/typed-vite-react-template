@@ -18,6 +18,7 @@ import {
     Boxes,
     BoxIcon,
     GitCommit,
+    Languages,
 } from 'lucide-react';
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
         { name: 'Clsx', icon: <Boxes size={18} /> },
         { name: 'Lucide Icons', icon: <BoxIcon size={18} /> },
         { name: 'MSW', icon: <TestTube size={18} /> },
+        { name: 'i18next', icon: <Languages size={18} /> },
     ];
 
     return (
