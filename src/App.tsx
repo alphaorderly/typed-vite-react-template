@@ -57,8 +57,14 @@ const App = () => {
                         <h1 className="mb-3 text-center font-square text-4xl font-extrabold text-gray-900">
                             Typed Vite React Template
                         </h1>
-                        <p className="text-center text-lg text-gray-600">
+                        <p className="text-center font-unifont text-lg text-gray-600">
                             A modern starting point for your React projects
+                            <br />
+                            현대적인 리액트 프로젝트의 시작점
+                            <br />
+                            一个现代的React项目起点
+                            <br />
+                            現代的なReactプロジェクトの出発点
                         </p>
                     </div>
                 </div>

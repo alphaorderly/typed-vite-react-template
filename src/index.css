@@ -22,4 +22,9 @@
             'Segoe UI Symbol',
             'Noto Color Emoji';
     }
+
+    @font-face {
+        font-family: 'unifont';
+        src: url('./assets/fonts/unifont.woff2') format('woff2');
+    }
 }
