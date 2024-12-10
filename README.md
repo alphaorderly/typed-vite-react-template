@@ -28,22 +28,16 @@ A modern and well-configured starting point for your React projects, utilizing T
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/alphaorderly/typed-vite-react-template .
+    vite create typed-vite-react .
     ```
 
-2. **Install dependencies**:
+-   You can enter project name too
 
-    ```bash
-    yarn install
-    ```
-
-3. **Run the development server**:
+2. **Run the development server**:
 
     ```bash
     yarn dev
     ```
-
-4. Open your browser at [http://localhost:5173](http://localhost:5173).
 
 ## Scripts
 
