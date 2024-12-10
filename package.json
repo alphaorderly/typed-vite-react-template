@@ -11,8 +11,7 @@
         "prepare": "husky",
         "test-once": "vitest run",
         "test": "vitest --watch",
-        "commitlint": "commitlint --edit",
-        "postinstall": "node init-template.js"
+        "commitlint": "commitlint --edit"
     },
     "dependencies": {
         "@tanstack/react-form": "^0.39.0",
