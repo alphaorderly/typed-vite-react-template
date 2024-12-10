@@ -25,7 +25,7 @@ A modern and well-configured starting point for your React projects, utilizing T
 
 0. **Move to directory you want to create react project**
 
-1. **Clone the repository**:
+1. **Start a project**:
 
     ```bash
     vite create typed-vite-react .
