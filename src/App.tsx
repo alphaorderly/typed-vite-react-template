@@ -137,14 +137,14 @@ const HomePage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 p-6">
+        <div className="min-h-screen bg-linear-to-br from-indigo-50 via-white to-purple-50 p-6">
             <div className="mx-auto max-w-4xl">
                 {/* Language Toggle */}
                 <button
                     onClick={toggleLanguage}
                     className={cn(
-                        'fixed right-8 top-8 flex items-center gap-2 rounded-full',
-                        'bg-white/70 px-4 py-2 backdrop-blur-sm transition-all',
+                        'fixed top-8 right-8 flex items-center gap-2 rounded-full',
+                        'bg-white/70 px-4 py-2 backdrop-blur-xs transition-all',
                         'hover:bg-white/90 hover:shadow-lg'
                     )}
                 >
@@ -156,13 +156,13 @@ const HomePage = () => {
 
                 {/* Header Section */}
                 <div className="relative mb-12 pt-12">
-                    <div className="absolute -left-4 -top-4 size-40 rounded-full bg-gradient-to-br from-indigo-200/40 to-purple-200/40 blur-3xl"></div>
+                    <div className="absolute -top-4 -left-4 size-40 rounded-full bg-linear-to-br from-indigo-200/40 to-purple-200/40 blur-3xl"></div>
                     <div className="relative flex flex-col items-center">
                         <Package className="mb-6 size-16 text-indigo-600" />
-                        <h1 className="mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-center font-square text-5xl font-black text-transparent">
+                        <h1 className="font-square mb-4 bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-center text-5xl font-black text-transparent">
                             {t('title')}
                         </h1>
-                        <p className="text-center font-unifont text-xl text-gray-600">
+                        <p className="font-unifont text-center text-xl text-gray-600">
                             {t('subtitle')}
                         </p>
                         <div className="mt-4 rounded-full bg-indigo-50 px-4 py-1 text-sm text-indigo-600">
@@ -171,18 +171,18 @@ const HomePage = () => {
                     </div>
                 </div>
 
-                <div className="space-y-8 rounded-2xl bg-white/70 p-8 shadow-xl backdrop-blur-sm">
+                <div className="space-y-8 rounded-2xl bg-white/70 p-8 shadow-xl backdrop-blur-xs">
                     {/* Star Wars Search */}
                     <div>
                         <div className="relative">
                             <input
                                 type="text"
-                                className="w-full rounded-xl border-2 border-transparent bg-white p-4 pl-12 shadow-md transition-all placeholder:text-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-500/20"
+                                className="w-full rounded-xl border-2 border-transparent bg-white p-4 pl-12 shadow-md transition-all placeholder:text-gray-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20 focus:outline-hidden"
                                 placeholder={t('searchStarWars')}
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                             />
-                            <Search className="absolute left-4 top-1/2 size-5 -translate-y-1/2 text-gray-400" />
+                            <Search className="absolute top-1/2 left-4 size-5 -translate-y-1/2 text-gray-400" />
                         </div>
                         {searchQuery && (
                             <div className="mt-2 max-h-64 overflow-auto rounded-xl border border-gray-100 bg-white shadow-lg">
@@ -233,7 +233,7 @@ const HomePage = () => {
                                     type="text"
                                     className={cn(
                                         'flex-1 rounded-xl border-2 border-transparent bg-white p-4 shadow-md transition-all placeholder:text-gray-400',
-                                        'focus:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-500/20',
+                                        'focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20 focus:outline-hidden',
                                         errors.message &&
                                             'border-red-300 focus:border-red-500 focus:ring-red-500/20'
                                     )}
@@ -242,7 +242,7 @@ const HomePage = () => {
                                 />
                                 <button
                                     type="submit"
-                                    className="rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 px-6 py-4 font-medium text-white shadow-md transition-all hover:from-indigo-600 hover:to-purple-600 hover:shadow-lg active:scale-95"
+                                    className="rounded-xl bg-linear-to-r from-indigo-500 to-purple-500 px-6 py-4 font-medium text-white shadow-md transition-all hover:from-indigo-600 hover:to-purple-600 hover:shadow-lg active:scale-95"
                                 >
                                     {t('submit')}
                                 </button>
@@ -281,7 +281,7 @@ const HomePage = () => {
                                         <div
                                             key={virtualItem.key}
                                             className={cn(
-                                                'absolute left-0 top-0 w-full',
+                                                'absolute top-0 left-0 w-full',
                                                 'group rounded-xl p-4 transition-all hover:bg-indigo-50'
                                             )}
                                             style={{
@@ -290,7 +290,7 @@ const HomePage = () => {
                                             }}
                                         >
                                             <div className="flex items-center gap-4">
-                                                <div className="flex size-10 items-center justify-center rounded-lg bg-indigo-100 text-indigo-600 shadow-sm transition-all group-hover:bg-indigo-200">
+                                                <div className="flex size-10 items-center justify-center rounded-lg bg-indigo-100 text-indigo-600 shadow-xs transition-all group-hover:bg-indigo-200">
                                                     {
                                                         libraries[
                                                             virtualItem.index
@@ -345,18 +345,18 @@ const CharacterDetailPage = () => {
         return <div className="p-8 text-center">{t('characterNotFound')}</div>;
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 p-8">
+        <div className="min-h-screen bg-linear-to-br from-indigo-50 via-white to-purple-50 p-8">
             <div className="mx-auto max-w-2xl">
                 <Link
                     to="/"
-                    className="mb-8 inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-indigo-600 backdrop-blur-sm transition-all hover:bg-white/90 hover:shadow-lg"
+                    className="mb-8 inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-indigo-600 backdrop-blur-xs transition-all hover:bg-white/90 hover:shadow-lg"
                 >
                     <ArrowLeft size={16} />
                     {t('backToHome')}
                 </Link>
-                <div className="overflow-hidden rounded-2xl bg-white/70 shadow-xl backdrop-blur-sm">
-                    <div className="relative bg-gradient-to-r from-indigo-500 to-purple-500 p-8 text-white">
-                        <div className="absolute -left-4 -top-4 size-40 rounded-full bg-white/10 blur-2xl"></div>
+                <div className="overflow-hidden rounded-2xl bg-white/70 shadow-xl backdrop-blur-xs">
+                    <div className="relative bg-linear-to-r from-indigo-500 to-purple-500 p-8 text-white">
+                        <div className="absolute -top-4 -left-4 size-40 rounded-full bg-white/10 blur-2xl"></div>
                         <h1 className="relative text-4xl font-bold">
                             {character.name}
                         </h1>
