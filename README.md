@@ -1,152 +1,220 @@
 # Typed Vite React Template
 
-A modern and well-configured starting point for your React projects, utilizing TypeScript, TailwindCSS, and other powerful tools to streamline your development experience.
+A modern, type-safe React development template built with Vite, TypeScript, and TailwindCSS. This template provides a robust foundation for building scalable React applications with comprehensive tooling and best practices.
 
-## 🌟 Latest Updates
+## 🚀 Quick Start
 
--   Added Star Wars API integration with search functionality
--   Implemented modern UI with glass morphism effects
--   Added form validation with profanity filter
--   Enhanced internationalization support (EN/KO)
--   Improved responsive design and animations
-
-## ⚡ Quick Start
-
-1. **Start a project**:
-
-    ```bash
-    vite create typed-vite-react .
-    ```
+1. **create the project**:
+   ```bash
+   # If creating new project
+   vite create typed-vite-react .
+   ```
 
 2. **Install dependencies**:
+   ```bash
+   yarn
+   ```
 
-    ```bash
-    yarn install
-    ```
+3. **Start development server**:
+   ```bash
+   yarn dev
+   ```
 
-3. **Run the development server**:
-    ```bash
-    yarn dev
-    ```
+## 📋 Available Scripts
 
-## 🛠️ Scripts
+| Command | Description |
+|---------|-------------|
+| `yarn dev` | Start development server with auto-open and host access |
+| `yarn build` | Build for production with TypeScript compilation |
+| `yarn preview` | Preview production build locally |
+| `yarn lint` | Run ESLint and Prettier with auto-fix |
+| `yarn test` | Run tests in watch mode |
+| `yarn test-once` | Run tests once |
+| `yarn prepare` | Set up Husky git hooks |
+| `yarn commitlint` | Validate commit messages |
 
-| Command          | Description              |
-| ---------------- | ------------------------ |
-| `yarn dev`       | Start development server |
-| `yarn build`     | Build for production     |
-| `yarn preview`   | Preview production build |
-| `yarn lint`      | Run ESLint and Prettier  |
-| `yarn test`      | Run tests in watch mode  |
-| `yarn test-once` | Run tests once           |
-| `yarn prepare`   | Set up Husky git hooks   |
+## 🛠️ Tech Stack
 
-## 📚 Core Features
+### Core Framework
+- **React 19** - Latest React with modern features
+- **TypeScript 5.6.2** - Type-safe development
+- **Vite 5.4.10** - Fast build tool and dev server
 
-### Base Technologies
+### Styling & UI
+- **TailwindCSS 4.0.9** - Utility-first CSS framework
+- **Lucide React 0.465.0** - Beautiful icon library
+- **clsx 2.1.1** - Conditional className utility
+- **tailwind-merge 2.5.5** - Tailwind class merging utility
 
--   🚀 **Vite** - Next Generation Frontend Tooling
--   ⚛️ **React 19** - Latest React features
--   📘 **TypeScript** - Type-safe development
--   🎨 **TailwindCSS** - Utility-first styling
+### State Management & Data Fetching
+- **Jotai 2.10.3** - Atomic state management
+- **TanStack React Query 5.62.2** - Server state management
+- **Ky 1.7.2** - HTTP client
 
-### Development Tools
+### Forms & Validation
+- **React Hook Form 7.54.2** - Performant forms
+- **Zod 3.23.8** - TypeScript-first schema validation
+- **@hookform/resolvers 3.10.0** - Form validation resolvers
 
-| Tool                        | Purpose                | Version  |
-| --------------------------- | ---------------------- | -------- |
-| @commitlint/cli             | Commit linting         | ^19.5.0  |
-| @eslint/js                  | JavaScript linting     | ^9.13.0  |
-| @testing-library/react      | React testing          | ^16.0.1  |
-| @testing-library/user-event | User event simulation  | ^14.5.2  |
-| @vitejs/plugin-react-swc    | Fast React compilation | ^3.5.0   |
-| autoprefixer                | CSS post-processing    | ^10.4.20 |
-| eslint                      | Code linting           | ^9.13.0  |
-| eslint-config-prettier      | Prettier integration   | ^9.1.0   |
-| husky                       | Git hooks              | ^9.1.6   |
-| msw                         | API mocking            | ^2.6.6   |
-| postcss                     | CSS processing         | ^8.4.47  |
-| prettier                    | Code formatting        | 3.3.3    |
-| tailwindcss                 | Utility CSS framework  | ^3.4.14  |
-| typescript                  | Type checking          | ~5.6.2   |
-| vite                        | Build tool             | ^5.4.10  |
-| vitest                      | Testing framework      | ^2.1.4   |
+### Routing & Internationalization
+- **React Router 7.0.2** - Client-side routing
+- **i18next 24.0.5** - Internationalization framework
+- **react-i18next 15.1.3** - React bindings for i18next
 
-### Main Libraries
+### Utilities
+- **Day.js 1.11.13** - Modern date manipulation library
+- **React Hot Toast 2.5.2** - Lightweight toast notifications
 
-| Library                 | Purpose              | Version  |
-| ----------------------- | -------------------- | -------- |
-| @hookform/resolvers     | Form validation      | ^3.10.0  |
-| @tanstack/react-query   | Data fetching        | ^5.62.2  |
-| @tanstack/react-virtual | List virtualization  | ^3.10.9  |
-| clsx                    | Class utilities      | ^2.1.1   |
-| dayjs                   | Date handling        | ^1.11.13 |
-| i18next                 | Internationalization | ^24.0.5  |
-| jotai                   | State management     | ^2.10.3  |
-| ky                      | HTTP client          | ^1.7.2   |
-| lucide-react            | Icons                | ^0.465.0 |
-| react                   | UI Library           | ^19.0.0  |
-| react-dom               | DOM rendering        | ^19.0.0  |
-| react-hook-form         | Form management      | ^7.54.2  |
-| react-i18next           | React i18n bindings  | ^15.1.3  |
-| react-router            | Routing              | ^7.0.2   |
-| tailwind-merge          | Tailwind utilities   | ^2.5.5   |
-| zod                     | Schema validation    | ^3.23.8  |
+## 🔧 Development Tools
 
-## 🎨 UI Features
+### Code Quality
+- **ESLint 9.13.0** - JavaScript/TypeScript linting
+- **Prettier 3.3.3** - Code formatting
+- **TypeScript ESLint 8.11.0** - TypeScript-specific linting rules
+- **ESLint Plugins**:
+  - `eslint-plugin-react 7.37.2` - React-specific rules
+  - `eslint-plugin-react-hooks 5.0.0` - React Hooks rules
+  - `eslint-plugin-react-refresh 0.4.14` - Fast refresh support
 
-### Modern Design Elements
+### Testing
+- **Vitest 2.1.4** - Fast unit testing framework
+- **Testing Library**:
+  - `@testing-library/react 16.0.1` - React component testing
+  - `@testing-library/dom 10.4.0` - DOM testing utilities
+  - `@testing-library/user-event 14.5.2` - User interaction simulation
+  - `@testing-library/jest-dom 6.6.3` - Custom DOM matchers
+- **MSW 2.6.6** - API mocking for tests
+- **jsdom 25.0.1** - DOM environment for testing
 
--   Gradient backgrounds and text effects
--   Glass morphism with backdrop blur
--   Smooth animations and transitions
--   Responsive layout
--   Interactive hover states
+### Git Hooks & Commit Standards
+- **Husky 9.1.6** - Git hooks management
+- **Commitlint 19.5.0** - Commit message validation
+- **lint-staged 15.2.10** - Run linters on staged files
 
-### Components
+### Build & Development
+- **@vitejs/plugin-react-swc 3.5.0** - Fast React compilation
+- **vite-tsconfig-paths 5.1.0** - TypeScript path resolution
+- **PostCSS 8.4.47** - CSS processing
+- **@tailwindcss/vite 4.0.9** - TailwindCSS Vite integration
+- **@tailwindcss/postcss 4.0.9** - TailwindCSS PostCSS plugin
 
--   🔍 Real-time search with dropdown
--   📋 Virtualized lists
--   📝 Validated forms
--   🌐 Language switcher
--   🎯 Interactive cards
-
-## 🌐 Internationalization
-
-Currently supports:
-
--   English (en)
--   Korean (ko)
-
-Add more languages by extending the locales in `src/locales/`.
+### Type Definitions
+- **@types/react 19.0.0** - React TypeScript definitions
+- **@types/react-dom 19.0.0** - React DOM TypeScript definitions
+- **@types/node 22.13.5** - Node.js TypeScript definitions
 
 ## 📁 Project Structure
 
-## Features
+```
+typed-vite-react-template/
+├── public/                 # Static assets
+├── src/
+│   ├── assets/            # Images, fonts, etc.
+│   ├── components/        # Reusable React components
+│   ├── consts/           # Application constants
+│   ├── hooks/            # Custom React hooks
+│   ├── locales/          # Internationalization files
+│   ├── pages/            # Page components
+│   ├── services/         # API services
+│   ├── stores/           # State management
+│   ├── tests/            # Test files
+│   ├── types/            # TypeScript type definitions
+│   ├── utils/            # Utility functions
+│   ├── App.tsx           # Main App component
+│   ├── main.tsx          # Application entry point
+│   └── index.css         # Global styles
+├── package.json          # Dependencies and scripts
+├── tsconfig.json         # TypeScript configuration
+├── vite.config.ts        # Vite configuration
+├── vitest.config.ts      # Vitest configuration
+└── README.md            # This file
+```
 
--   **TypeScript**: Type-safe React application development.
--   **Vite**: Fast build and development setup.
--   **TailwindCSS**: Highly customizable CSS framework.
--   **ESLint and Prettier**: Code quality and formatting tools with preconfigured rules.
--   **Husky and Commitlint**: Enforce commit standards and hooks.
--   **Testing with Vitest and Testing Library**: A robust testing environment.
--   **React Router**: For navigation.
--   **Jotai**: State management.
--   **Day.js**: Date and time manipulation.
--   **TanStack Tools**:
-    -   React Query: For server state management.
-    -   React Virtual: For virtualizing large lists.
--   **Zod**: Schema validation.
--   **Clsx and Tailwind Merge**: Utility for conditional class management.
--   **i18next**: Internationalization support for multiple languages.
+## 🎯 Key Features
 
-## Customization
+- **Type Safety**: Full TypeScript support with strict configuration
+- **Modern React**: Latest React 19 features and patterns
+- **Fast Development**: Vite for lightning-fast HMR and builds
+- **Comprehensive Testing**: Vitest + Testing Library setup
+- **Code Quality**: ESLint + Prettier with pre-configured rules
+- **Git Workflow**: Husky + Commitlint for consistent commits
+- **Internationalization**: i18next setup for multi-language support
+- **Form Handling**: React Hook Form with Zod validation
+- **State Management**: Jotai for atomic state management
+- **API Integration**: TanStack Query for server state
+- **User Feedback**: React Hot Toast for notifications
+- **Styling**: TailwindCSS with utility-first approach
 
-You can easily add or remove libraries to fit your project's needs. The template provides a flexible and extendable foundation for any React application.
+## 🚀 Getting Started
 
-## Contributing
+1. **Environment Setup**:
+   ```bash
+   # Ensure you have Node.js 20+ and Yarn installed
+   node --version
+   yarn --version
+   ```
 
-Feel free to contribute to this template by submitting pull requests or opening issues. Let's build a better React development experience together!
+2. **Install Dependencies**:
+   ```bash
+   yarn install
+   ```
 
-## License
+3. **Start Development**:
+   ```bash
+   yarn dev
+   ```
 
-This project is open-source and available under the [MIT License](LICENSE).
+4. **Run Tests**:
+   ```bash
+   yarn test
+   ```
+
+5. **Build for Production**:
+   ```bash
+   yarn build
+   ```
+
+## 📝 Development Guidelines
+
+### Code Style
+- Use TypeScript for all new code
+- Follow ESLint and Prettier configurations
+- Use conventional commit messages
+- Write tests for new features
+
+### Component Structure
+- Place reusable components in `src/components/`
+- Use TypeScript interfaces for props
+- Implement proper error boundaries
+- Follow React best practices
+
+### State Management
+- Use Jotai for global state
+- Use React Query for server state
+- Keep component state local when possible
+
+### Styling
+- Use TailwindCSS utility classes
+- Create custom components for repeated patterns
+- Follow responsive design principles
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Run the test suite
+6. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- [Vite](https://vitejs.dev/) for the fast build tool
+- [React](https://react.dev/) for the UI library
+- [TailwindCSS](https://tailwindcss.com/) for the styling framework
+- [TanStack](https://tanstack.com/) for excellent React tools
+- [Jotai](https://jotai.org/) for atomic state management
