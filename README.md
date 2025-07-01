@@ -64,6 +64,7 @@ A modern, type-safe React development template built with Vite, TypeScript, and 
 ### Utilities
 - **Day.js 1.11.13** - Modern date manipulation library
 - **React Hot Toast 2.5.2** - Lightweight toast notifications
+- **@uidotdev/usehooks 2.4.1** - Collection of useful React hooks
 
 ## 🔧 Development Tools
 
