@@ -119,10 +119,13 @@ typed-vite-react-template/
 │   ├── stores/           # State management
 │   ├── tests/            # Test files
 │   ├── types/            # TypeScript type definitions
+│   │   └── env.d.ts      # Environment variable types
 │   ├── utils/            # Utility functions
 │   ├── App.tsx           # Main App component
 │   ├── main.tsx          # Application entry point
 │   └── index.css         # Global styles
+├── .env.development      # Development environment variables
+├── .env.production       # Production environment variables
 ├── package.json          # Dependencies and scripts
 ├── tsconfig.json         # TypeScript configuration
 ├── vite.config.ts        # Vite configuration
@@ -135,6 +138,7 @@ typed-vite-react-template/
 - **Type Safety**: Full TypeScript support with strict configuration
 - **Modern React**: Latest React 19 features and patterns
 - **Fast Development**: Vite for lightning-fast HMR and builds
+- **Environment Configuration**: Secure environment variable management with TypeScript support
 - **Comprehensive Testing**: Vitest + Testing Library setup
 - **Code Quality**: ESLint + Prettier with pre-configured rules
 - **Git Workflow**: Husky + Commitlint for consistent commits
@@ -173,6 +177,80 @@ typed-vite-react-template/
    ```bash
    yarn build
    ```
+
+## 🔐 Environment Variables
+
+This project uses Vite's environment variable system for configuration management. Environment variables provide a secure way to handle configuration that varies between development and production environments.
+
+### How Environment Variables Work
+
+- **Vite Convention**: All environment variables must be prefixed with `VITE_` to be accessible in the client-side code
+- **Type Safety**: Environment variables are fully typed with TypeScript definitions in `src/types/env.d.ts`
+- **Build-time Injection**: Variables are embedded at build time, not runtime
+
+### Environment Files
+
+The project includes two environment-specific files:
+
+- **`.env.development`** - Variables for development environment
+- **`.env.production`** - Variables for production environment
+
+These files are **empty by default** and should be configured based on your project needs.
+
+### Adding Environment Variables
+
+1. **Add to Environment Files**:
+   ```bash
+   # .env.development
+   VITE_API_BASE_URL=http://localhost:3000/api
+   VITE_DEBUG_MODE=true
+   
+   # .env.production
+   VITE_API_BASE_URL=https://api.yourdomain.com
+   VITE_DEBUG_MODE=false
+   ```
+
+2. **Update TypeScript Definitions**:
+   ```typescript
+   // src/types/env.d.ts
+   interface ImportMetaEnv {
+     readonly VITE_API_BASE_URL: string
+     readonly VITE_DEBUG_MODE: string
+   }
+   ```
+
+3. **Use in Your Code**:
+   ```typescript
+   const apiUrl = import.meta.env.VITE_API_BASE_URL
+   const isDebugMode = import.meta.env.VITE_DEBUG_MODE === 'true'
+   ```
+
+### Common Environment Variables
+
+| Variable | Purpose | Example |
+|----------|---------|---------|
+| `VITE_API_BASE_URL` | API endpoint base URL | `https://api.example.com` |
+| `VITE_APP_TITLE` | Application title | `My React App` |
+| `VITE_DEBUG_MODE` | Enable debug features | `true` or `false` |
+| `VITE_SENTRY_DSN` | Sentry error tracking | `https://...` |
+| `VITE_GOOGLE_ANALYTICS_ID` | Google Analytics ID | `G-XXXXXXXXXX` |
+
+### Security Considerations
+
+⚠️ **Important Security Notes**:
+
+- **Never commit sensitive data**: Environment files are gitignored for security
+- **Client-side exposure**: All `VITE_*` variables are visible in the browser
+- **Server secrets**: Use server-side environment variables for sensitive data like API keys
+- **Validation**: Always validate environment variables in your application
+
+### Best Practices
+
+- Use descriptive variable names with the `VITE_` prefix
+- Provide default values for optional variables
+- Document all environment variables in your team
+- Use different values for development and production
+- Validate required environment variables at startup
 
 ## 📝 Development Guidelines
 
