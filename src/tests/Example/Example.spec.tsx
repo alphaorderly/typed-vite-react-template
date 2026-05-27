@@ -1,4 +1,4 @@
-import { expect, test } from 'vite-plus/test';
+import { expect, test } from 'vitest';
 import Example from './Example';
 import { render } from '../../utils/test/render';
 
